@@ -20,9 +20,9 @@ class Scoreboard(Turtle):
         self.write(self.r_socre, align='center', font=('curier', 80, 'normal'))
 
     def l_point(self):
-        self.l_socre += 1
+        self.l_score += 1
         self.update_scoreboard()
 
     def r_point(self):
-        self.r_socre += 1
+        self.r_score += 1
         self.update_scoreboard()
