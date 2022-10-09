@@ -9,8 +9,20 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.l_socre = 0
         self.r_score = 0
+        
+        self.update_scoreboard()
+        
+    def update_scoreboard(self):
+        self.clear()
         self.goto(-100, 200)
         self.write(self.l_socre, align='center', font=('curier', 80, 'normal'))
         self.goto(100, 200)
         self.write(self.r_socre, align='center', font=('curier', 80, 'normal'))
-        
+
+    def l_point(self):
+        self.l_socre += 1
+        self.update_scoreboard()
+
+    def r_point(self):
+        self.r_socre += 1
+        self.update_scoreboard()
